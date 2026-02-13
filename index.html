@@ -1,11 +1,244 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nutricionista | Nome do Profissional</title>
+    <style>
+        /* Estilos Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9fbf9;
+        }
+
+        /* Cores de Destaque: Verde Natureza e Tons Suaves */
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #2E7D32;
+            --accent-color: #8BC34A;
+            --text-light: #ffffff;
+        }
+
+        header {
+            background-color: var(--text-light);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), 
+                        url('https://images.unsplash.com/photo-1490818387583-1baba5e638af?auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Seções */
+        section {
+            padding: 80px 10% 40px;
+        }
+
+        h2 {
+            text-align: center;
+            color: var(--secondary-color);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background: var(--accent-color);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            header { flex-direction: column; }
+            nav { margin-top: 15px; }
+            nav a { margin: 0 10px; }
+        }
+    </style>
 </head>
 <body>
-    
+
+    <header>
+        <div class="logo">NutriSaúde</div>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <h1>Sua jornada para uma vida mais equilibrada</h1>
+        <p>Nutrição humanizada e planos alimentares personalizados para você alcançar seus objetivos com saúde e prazer.</p>
+        <a href="https://wa.me/SEUNUMERO" class="cta-button">Agendar Consulta</a>
+    </section>
+
+    <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
+            <div style="flex: 1; min-width: 300px;">
+                <p>Olá! Sou [Seu Nome], nutricionista graduado(a) pela [Sua Universidade]. Acredito que a comida é muito mais do que calorias; é cultura, prazer e a base da nossa energia vital.</p>
+                <br>
+                <p>Minha missão é ajudar você a fazer as pazes com a balança e com o prato, focando em resultados sustentáveis e saúde a longo prazo.</p>
+            </div>
+            <div style="flex: 1; min-width: 300px; text-align: center;">
+                <div style="width: 250px; height: 250px; background: #ddd; border-radius: 50%; display: inline-block;">
+                    <img src="https://via.placeholder.com/250" alt="Sua Foto" style="border-radius: 50%; width: 100%;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" style="background-color: #f0f7f0;">
+        <h2>Como posso te ajudar?</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Emagrecimento</h3>
+                <p>Perda de peso de forma saudável, sem dietas restritivas e efeito sanfona.</p>
+            </div>
+            <div class="service-card">
+                <h3>Nutrição Esportiva</h3>
+                <p>Melhora da performance e ganho de massa muscular com foco no seu treino.</p>
+            </div>
+            <div class="service-card">
+                <h3>Educação Alimentar</h3>
+                <p>Aprenda a escolher melhor os alimentos e entender os rótulos no dia a dia.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <div style="text-align: center;">
+            <p>Atendimento presencial e online.</p>
+            <p><strong>E-mail:</strong> contato@seunome.com.br</p>
+            <p><strong>Endereço:</strong> Rua da Saúde, 123 - Centro</p>
+            <br>
+            <a href="https://wa.me/SEUNUMERO" class="cta-button">Falar no WhatsApp</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Nutricionista [Seu Nome]. Todos os direitos reservados.</p>
+        <div class="social-links" style="margin-top: 15px;">
+            <a href="#">Instagram</a> | <a href="#">LinkedIn</a> | <a href="#">Facebook</a>
+        </div>
+    </footer>
+
 </body>
 </html>
